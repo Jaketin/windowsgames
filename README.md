@@ -11,3 +11,13 @@ You can modify the set of programs you want in the init.sls file.
 On your master create the directory /srv/salt and clone this repository there. After cloning, simply run the run.sh file with the command
 
 	bash run.sh
+
+After doing this, the selected programs will be installed. The programs are:
+- Steam
+- Origin
+- UPlay
+- Epic Games Launcher
+- League of Legends
+- TeamSpeak 3
+- Mumble
+- Discord (note that the installation file must be opened manually from your desktop)
