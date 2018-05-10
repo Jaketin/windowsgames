@@ -28,7 +28,7 @@ origin:
     - require:
       - pkg: chocolatey
 
-# Note that UPlay does not create any shortcuts after installation. UPlay can be found at C:\Program Files (x86)\Ubisoft.
+# Note that UPlay does not create any shortcuts after installation. UPlay can be found at C:\Program Files (x86)\Ubisoft
 
 uplay:
   chocolatey.installed:
@@ -62,7 +62,8 @@ mumble:
     - require:
       - pkg: chocolatey
 
-# Discord installation. The installer is downloaded onto the desktop and must be opened manually as it won't install for unknown reasons if done through Salt.
+# Discord installation. The installer is downloaded onto the desktop and must be opened manually
+# as it won't install for unknown reasons if done through Salt.
 # After installation is complete, the installer file can be deleted.
 
 discord:
