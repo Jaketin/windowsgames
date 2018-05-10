@@ -12,7 +12,7 @@ On your master create the directory /srv/salt and clone this repository there. A
 
 	bash run.sh
 
-After doing this, the selected programs will be installed. The programs are:
+After doing this, the selected programs will be installed. By default, the programs are
 - Steam
 - Origin
 - UPlay
@@ -20,4 +20,4 @@ After doing this, the selected programs will be installed. The programs are:
 - League of Legends
 - TeamSpeak 3
 - Mumble
-- Discord (note that the installation file must be opened manually from your desktop)
+- Discord (note that Discord's installation file must be opened manually from your desktop.)
