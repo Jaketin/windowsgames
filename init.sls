@@ -7,6 +7,9 @@ chocolatey:
 
 #steam:
 #  chocolatey_installed
+#    - name: steam
+#    - require:
+#      - pkg: chocolatey
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14,27 +17,56 @@ chocolatey:
 # Install gaming platforms/games; comment corresponding lines to not install unwanted programs. 
 
 steam:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: steam
+    - require:
+      - pkg: chocolatey
 
 origin:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: origin
+    - require:
+      - pkg: chocolatey
+
+# Note that UPlay does not create any shortcuts after installation. UPlay can be found at C:\Program Files (x86)\Ubisoft.
 
 uplay:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: uplay
+    - require:
+      - pkg: chocolatey
 
 epicgameslauncher:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: epicgameslauncher
+    - require:
+      - pkg: chocolatey
 
 leagueoflegends:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: leagueoflegends
+    - require:
+      - pkg: chocolatey
 
-# Install Discord, Teamspeak and Mumble for voice communications. Comment corresponding lines to not install unwanted programs.
-
-discord:
-  chocolatey.installed
+# Install Teamspeak and Mumble for voice communications. Comment corresponding lines to not install unwanted programs.
 
 teamspeak:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: teamspeak
+    - require:
+      - pkg: chocolatey
 
 mumble:
-  chocolatey.installed
+  chocolatey.installed:
+    - name: mumble
+    - require:
+      - pkg: chocolatey
+
+# Discord installation. The installer is downloaded onto the desktop and must be opened manually as it won't install for unknown reasons if done through Salt.
+# After installation is complete, the installer file can be deleted.
+
+discord:
+  cmd.run:
+    - name: 'Invoke-WebRequest -Uri "https://discordapp.com/api/download?platform=win" -OutFile "C:\Users\Public\Desktop\DiscordSetup_DeleteAfterInstalling.exe"'
+    - shell: powershell
+
