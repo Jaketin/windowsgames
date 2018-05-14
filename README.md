@@ -10,15 +10,13 @@ To use this salt module you need a Linux computer (or live USB) and a Windows co
 
 Running salt locally on a Windows computer is possible, but it is more complicated and slower than doing it through a Linux master. To do it, you'd need to modify the minion config file at multiple places and download git or manually download the windows repositories (Source: https://github.com/saltstack/salt/pull/6273/commits/023383e53f73bcac1fcfd86c229d1a40526335cb).
 
-You can modify the set of programs you want in the init.sls file.
-
 ### To run this module, simply run the run.sh file on your master:
 
 	bash run.sh
 
-If you run into an error like "No minions matched the target - ERROR: No return received" try running the run.sh again.
+If you run into an error like "No minions matched the target" "ERROR: No return received" try running the run.sh again.
 
-After you run the bash script, salt-master will be installed on your Linux master and the selected programs will be installed. By default, the programs are
+After you run the bash script, salt-master will be installed on your Linux computer and the selected programs will be installed, you can modify the set of programs you want in the windowsgames/init.sls file. By default, the programs are
 - Steam
 - Origin
 - UPlay
