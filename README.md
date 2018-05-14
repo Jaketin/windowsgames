@@ -23,3 +23,14 @@ After doing this, the selected programs will be installed. By default, the progr
 - TeamSpeak 3
 - Mumble
 - Discord (note that Discord's installation file must be opened manually from your desktop.)
+
+## Sources used during the development
+
+- SaltStack documentation
+- http://www.itprotoday.com/management-mobility/easily-finding-special-paths-powershell-scripts
+- https://4sysops.com/archives/use-powershell-to-download-a-file-with-http-https-and-ftp/
+- http://www.itprotoday.com/management-mobility/running-executables-powershell
+- http://terokarvinen.com/2018/control-windows-with-salt
+- https://superuser.com/questions/518388/powershell-multiple-commands
+- https://github.com/saltstack/salt/issues/27866
+- https://github.com/saltstack/salt/pull/6273/commits/023383e53f73bcac1fcfd86c229d1a40526335cb
