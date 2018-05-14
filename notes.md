@@ -6,9 +6,9 @@ This would be the command to download and install Discord in PowerShell, but I c
 
 	Invoke-WebRequest -Uri "https://discordapp.com/api/download?platform=win" -OutFile "$env:USERPROFILE\AppData\Local\Temp\DiscordSetup.exe"; .$env:USERPROFILE\AppData\Local\Temp\DiscordSetup.exe
 
-I would've created a package file to winrepo-ng like with Origin, but Discord does not use a conventional installer. Discord's installer is a program that when run installs Discord to the default directory with no installer windows or anything. I tried to run the above commands to install Discord instead, but did not succeed (problems below). 
+I originally planned to create a salt repository file, but Discord does not use a conventional (.msi) installer. Discord's installer is a program that when run installs Discord to the default directory with no questions asked. I tried to run the above commands to install Discord instead, but did not succeed (problems below). 
 
-I will resort to Chocolatey for the time being.
+Due to this I moved to Chocolatey (which did not fruition with Discord either...)
 
 ### The problems
 
@@ -32,7 +32,7 @@ Obviously I took it a step back and did not use the environmental variable:
 
 This resulted in the installer being downloaded. The install part however did not succeed. A Discord process was opened, and another one after that, and two more; but nothing was happening. Discord was not being installed.
 
-Lastly I tried to do this through a Powershell script. I ran this command in Powershell and answered with Y to allow running untrusted scripts:
+Lastly I tried to do this through a Powershell script file (just the original commands in a separate file). I ran this command in Powershell and answered with Y to allow running untrusted scripts:
 
 	Set-ExecutionPolicy RemoteSigned
 
