@@ -6,6 +6,8 @@ Salt module made to set up a Windows computer for gaming. Installs a set of appl
 
 To use this salt module you need a Linux computer (or live USB) running salt-master and a Windows computer with salt-minion with the Linux computer set as master. Salt-master needs to be the same version (or newer) than the minion(s).
 
+Running salt locally on a Windows computer is possible, but it is more complicated and slower than doing it through a Linux master. To do it, you'd need to modify the minion config file at multiple places and download git or manually download the windows repositories (Source: https://github.com/saltstack/salt/pull/6273/commits/023383e53f73bcac1fcfd86c229d1a40526335cb).
+
 You can modify the set of programs you want in the init.sls file.
 
 On your master create the directory /srv/salt and clone this repository there. After cloning, simply run the run.sh file with the command
