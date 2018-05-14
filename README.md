@@ -2,7 +2,7 @@ by Jaakko Veijonen 2018
 
 # windowsgames
 
-Salt module made to set up a Windows computer for gaming. Installs a set of applications like Steam, Origin and Discord.
+A salt module made to set up a Windows computer for gaming. Installs a set of applications like Steam, Origin and Discord.
 
 ## How to use?
 
@@ -16,7 +16,7 @@ Running salt locally on a Windows computer is possible, but it is more complicat
 
 If you run into an error like "No minions matched the target" "ERROR: No return received" try running the run.sh again.
 
-After you run the bash script, salt-master will be installed on your Linux computer and the selected programs will be installed, you can modify the set of programs you want in the windowsgames/init.sls file. By default, the programs are
+After you run the bash script, salt-master will be installed on your Linux computer and the selected programs will be installed on the Windows computer, you can modify the set of programs you want in the windowsgames/init.sls file. By default, the programs are
 - Steam
 - Origin
 - UPlay
