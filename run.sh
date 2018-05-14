@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo mkdir -p /srv/salt && sudo mv windowsgames/ /srv/salt/windowsgames/ && sudo salt-run winrepo.update_git_repos && sudo salt -G 'os:windows' pkg.refresh_db && sudo salt -G 'os:windows' state.apply windowsgames
+wget https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub && sudo apt-key add SALTSTACK-GPG-KEY.pub && echo "deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/2018.3 xenial main"|sudo tee /etc/apt/sources.list.d/saltstack.list && sudo apt update && sudo apt -y install salt-master && sudo mkdir -p /srv/salt && sudo mv windowsgames/ /srv/salt/windowsgames/ && sudo salt-run winrepo.update_git_repos && sudo salt -G 'os:windows' pkg.refresh_db && sudo salt -G 'os:windows' state.apply windowsgames
