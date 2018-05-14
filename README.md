@@ -1,3 +1,5 @@
+by Jaakko Veijonen 2018
+
 # windowsgames
 
 Salt module made to set up a Windows computer for gaming. Installs a set of applications like Steam, Origin and Discord.

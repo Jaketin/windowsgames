@@ -1,3 +1,5 @@
+by Jaakko Veijonen 2018
+
 # Notes
 
 ## Problems with PowerShell and Salt

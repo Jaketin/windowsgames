@@ -1,3 +1,5 @@
+# by Jaakko Veijonen 2018
+
 # Install Chocolatey to easily install the wanted programs
 
 chocolatey:
